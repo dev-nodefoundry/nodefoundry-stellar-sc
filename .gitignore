@@ -1,0 +1,10 @@
+# Rust's output directory
+target
+
+# Local settings
+.soroban
+.stellar
+
+# Documentation files (ignore all in docs except final clean PDF)
+docs/*
+!docs/TECHNICAL_SPECIFICATION_final_clean.pdf
