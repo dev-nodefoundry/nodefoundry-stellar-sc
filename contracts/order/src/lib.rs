@@ -411,11 +411,6 @@ impl OrderContract {
         depin_orders.push_back(order_id.clone());
         env.storage().persistent().set(&DataKey::DepinOrders(depin_id.clone()), &depin_orders);
     }
-
-    fn u32_from_order_id(id: &BytesN<32>) -> u32 {
-        let bytes = id.to_array();
-        u32::from_be_bytes([bytes[0], bytes[1], bytes[2], bytes[3]])
-    }
 }
 
 mod test;
